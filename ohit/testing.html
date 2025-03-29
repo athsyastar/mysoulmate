@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Soulmate?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        body {
+            background: url('images/Premium Vector _ Blue sky cloud in pixel art style.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            color: #ff85a2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 18px;
+            color: #ff85a2;
+            padding: 10px;
+        }
+        .button {
+            padding: 12px 20px;
+            font-size: 14px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-family: 'Press Start 2P', cursive;
+            display: block;
+            width: 80%;
+            max-width: 250px;
+            margin: 10px auto;
+        }
+        .yes {
+            background-color: #ff85a2;
+            color: white;
+        }
+        .no {
+            background-color: #aaa;
+            color: white;
+            position: absolute;
+        }
+        .letter-container {
+            display: none;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 15px;
+            border: 2px solid darkblue;
+            margin-top: 15px;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+        }
+        .letter-container img {
+            width: 100%;
+            border-radius: 15%;
+        }
+        .choose-date {
+            display: none;
+            background-color: #ff85a2;
+            color: white;
+            width: 80%;
+            max-width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you be my soulmate forever? 💕</h1>
+    <button class="button yes" id="yesBtn">Yes Ofc I dooo</button>
+    <button class="button no" id="noBtn">Hmm no</button>
+    
+    <div class="letter-container" id="letter">
+        <img src="images/cute.png" alt="My Letter to You">
+        <br><br>
+        <a href="choosedate.html"><button class="button choose-date">Choose Date</button></a>
+    </div>
+    
+    <script>
+        document.getElementById("noBtn").onmouseover = function() {
+            let x = Math.random() * (window.innerWidth - this.offsetWidth);
+            let y = Math.random() * (window.innerHeight - this.offsetHeight);
+            this.style.left = `${Math.max(0, x)}px`;
+            this.style.top = `${Math.max(0, y)}px`;
+        };
+        
+        document.getElementById("yesBtn").onclick = function() {
+            document.getElementById("letter").style.display = "block";
+            document.querySelector(".choose-date").style.display = "inline-block";
+        };
+    </script>
+</body>
+</html>
