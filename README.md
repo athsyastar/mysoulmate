@@ -1,2 +1,2 @@
 # mysoulmate
-love
+https://athsyastar.github.io/mysoulmate/
